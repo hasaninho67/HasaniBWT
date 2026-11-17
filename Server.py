@@ -15,7 +15,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
         data = client.recv(1024)
         parola = data.decode()
         print("Dati ricevuti dal client:", parola)
-        bwt_result = AlgoritmoBWT.bwt_algorithm(parola)
+        bwt_result = AlgoritmoBWT.trasformata_BWT(parola)
         client.sendall(bwt_result.encode())
         print("Dati inviati al client:", bwt_result)
         
